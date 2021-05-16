@@ -46,9 +46,10 @@ namespace EmployeeMangementSystem
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            txtNameRead.Text = read.Name;
+            txtNameRead.Text = read.Name.ToUpper();
             txtAgeRead.Text = read.Age.ToString();
-            txtSalaryRead.Text = read.Salary.ToString();
+            double basic = read.Salary + 10;
+            txtSalaryRead.Text = basic.ToString();
             txtEmailRead.Text = read.Email;
         }
 
